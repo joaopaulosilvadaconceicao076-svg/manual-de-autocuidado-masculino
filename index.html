@@ -283,14 +283,14 @@ dialog::backdrop{background:rgba(0,0,0,.8)}
 
 <script>
 /* ===== CONFIGURAÇÃO (edite aqui) ===== */
-const CHECKOUT_URL = "https://SEU-LINK-DE-PAGAMENTO-AQUI"; // cole seu link da Kiwify/Cakto
+const CHECKOUT_URL = "https://pay.kiwify.com.br/C4PM2tO"; // link de pagamento da Kiwify
 const PRECO = "14,90";
 const TEXTO_PORTA = "PARA<br>DE SER<br>FEIO"; // texto escrito na porta
 const SUPORTE_EMAIL = "suporte@seudominio.com";
 /* ===================================== */
 
 document.querySelectorAll('.checkout').forEach(a=>{
-  if(a.classList.contains('big')){a.href=CHECKOUT_URL;a.rel="noopener"}
+  a.href=CHECKOUT_URL;a.rel="noopener";
 });
 document.getElementById('doorText').innerHTML=TEXTO_PORTA;
 document.getElementById('price').innerHTML='<small>R$</small>'+PRECO;
